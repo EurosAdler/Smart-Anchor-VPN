@@ -16,12 +16,12 @@
     {"id":6, "app":"com.get.client"}
   ],
   "free":[
-    {"id":0, "file":0, "city":"Essen","country":"Germany","image":"germany","ip":"de1.freeopenvpn.org","active":"true","signal":"a"},
+    {"id":0, "file":0, "city":"Essen","country":"Germany","image":"germany","ip":"51.68.191.75","active":"true","signal":"a"},
     {"id":1, "file":0, "city":"Hamburg","country":"Germany","image":"germany","ip":"51.68.191.75","active":"true","signal":"b"},
     {"id":2, "file":1, "city":"Los Angeles CA","country":"United States","image":"unitedstates","ip":"205.185.119.100","active":"true","signal":"c"}
     {"id":3, "file":2, "city":"Ushiku","country":"Japan","image":"japan","ip":"219.100.37.50","active":"true","signal":"d"}
     {"id":4, "file":2, "city":"Ushiku jp","country":"Japan","image":"japan","ip":"219.100.37.212","active":"true","signal":"e"}
-    {"id":5, "file":1, "city":"Los Angeles CA","country":"United States","image":"unitedstates","ip":"205.185.119.100","active":"true","signal":"c"}
-    {"id":6, "file":1, "city":"Los Angeles CA","country":"United States","image":"unitedstates","ip":"205.185.119.100","active":"true","signal":"c"}
+    {"id":5, "file":3, "city":"Los Angeles CA","country":"United States","image":"unitedstates","ip":"205.185.119.100","active":"true","signal":"c"}
+    {"id":6, "file":3, "city":"Los Angeles CA","country":"United States","image":"unitedstates","ip":"205.185.119.100","active":"true","signal":"c"}
   ]
 }
