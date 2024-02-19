@@ -79,7 +79,7 @@ cbeb877ed06f97038e5d68caaecce2c9
 dbbf0a336cecba7d504c787ab24874a3
 -----END OpenVPN Static key V1-----
 </tls-auth>"},
-{"id":0,"file":"client
+{"id":1,"file":"client
   dev tun
 proto tcp
 remote 123.219.99.10 1542
