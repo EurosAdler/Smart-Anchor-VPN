@@ -16,7 +16,7 @@
     {"id":6, "app":"com.get.client"}
   ],
   "free":[
-    {"id":0, "file":0, "city":"Essen","country":"Germany","image":"germany","ip":"de1.freeopenvpn.org","active":"true","signal":"a"},
+    {"id":0, "file":0, "city":"Tokyo1","country":"Japan","image":"japan","ip":"public-vpn-120.opengw.net","active":"true","signal":"a"},
     {"id":1, "file":0, "city":"Tokyo","country":"Japan","image":"japan","ip":"219.100.37.193","active":"true","signal":"b"},
     {"id":2, "file":1, "city":"Canada","country":"Canada","image":"canada","ip":"144.217.253.149","active":"true","signal":"c"},
     {"id":3, "file":1, "city":"Bangkok","country":"United States","image":"thailand","ip":"205.185.119.100","active":"true","signal":"c"},
