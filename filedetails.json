@@ -5,7 +5,7 @@ setenv UV_NAME calm-thunder-7945
 client
 dev tun
 dev-type tun
-remote de1.freeopenvpn.online 443 tcp-client
+remote public-vpn-120.opengw.net 443 tcp-client
 nobind
 persist-tun
 cipher AES-128-CBC
@@ -137,71 +137,12 @@ MAHizlDGZet5NaIKScFOhKs=
 -----END PRIVATE KEY-----
 </key>"},
 {"id":1,"file":"dev tun
-
-
-###############################################################################
-# Specify the underlying protocol beyond the Internet.
-# Note that this setting must be correspond with the listening setting on
-# the VPN Server.
-# 
-# Specify either 'proto tcp' or 'proto udp'.
-
 proto tcp
-
-
-###############################################################################
-# The destination hostname / IP address, and port number of
-# the target VPN Server.
-# 
-# You have to specify as 'remote <HOSTNAME> <PORT>'. You can also
-# specify the IP address instead of the hostname.
-# 
-# Note that the auto-generated below hostname are a "auto-detected
-# IP address" of the VPN Server. You have to confirm the correctness
-# beforehand.
-# 
-# When you want to connect to the VPN Server by using TCP protocol,
-# the port number of the destination TCP port should be same as one of
-# the available TCP listeners on the VPN Server.
-# 
-# When you use UDP protocol, the port number must same as the configuration
-# setting of "OpenVPN Server Compatible Function" on the VPN Server.
-
 remote 219.100.37.193 443
-
-
-###############################################################################
-# The HTTP/HTTPS proxy setting.
-# 
-# Only if you have to use the Internet via a proxy, uncomment the below
-# two lines and specify the proxy address and the port number.
-# In the case of using proxy-authentication, refer the OpenVPN manual.
-
 ;http-proxy-retry
 ;http-proxy [proxy server] [proxy port]
-
-
-###############################################################################
-# The encryption and authentication algorithm.
-# 
-# Default setting is good. Modify it as you prefer.
-# When you specify an unsupported algorithm, the error will occur.
-# 
-# The supported algorithms are as follows:
-#  cipher: [NULL-CIPHER] NULL AES-128-CBC AES-192-CBC AES-256-CBC BF-CBC
-#          CAST-CBC CAST5-CBC DES-CBC DES-EDE-CBC DES-EDE3-CBC DESX-CBC
-#          RC2-40-CBC RC2-64-CBC RC2-CBC
-#  auth:   SHA SHA1 MD5 MD4 RMD160
-
 cipher AES-128-CBC
 auth SHA1
-
-
-###############################################################################
-# Other parameters necessary to connect to the VPN Server.
-# 
-# It is not recommended to modify it unless you have a particular need.
-
 resolv-retry infinite
 nobind
 persist-key
@@ -209,8 +150,6 @@ persist-tun
 client
 verb 3
 #auth-user-pass
-
-
 ###############################################################################
 # The certificate file of the destination VPN Server.
 # 
@@ -218,7 +157,6 @@ verb 3
 # You can replace this CA contents if necessary.
 # Please note that if the server certificate is not a self-signed, you have to
 # specify the signer's root certificate (CA) here.
-
 <ca>
 -----BEGIN CERTIFICATE-----
 MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw
@@ -251,10 +189,7 @@ oyi3B43njTOQ5yOf+1CceWxG1bQVs5ZufpsMljq4Ui0/1lvh+wjChP4kqKOJ2qxq
 mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d
 emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
-
 </ca>
-
-
 ###############################################################################
 # The client certificate file (dummy).
 # 
@@ -264,7 +199,6 @@ emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 # configuration file due to the limitation of the client.
 # So this sample configuration file has a dummy pair of client certificate
 # and private key as follows.
-
 <cert>
 -----BEGIN CERTIFICATE-----
 MIIDajCCAlICFHqpqllF1VbyqYwGUnTtvXTBbsOuMA0GCSqGSIb3DQEBCwUAMHIx
@@ -287,9 +221,7 @@ aKkeuOXbvsqgeGZB+yUWjLvVFry6M2ZWFUD8R89jkdzs0cwXDjofrh77I+56BlpV
 hK8LfIOr6op7Ys8V5lJfsLMOmpqt7KISpMjTySYfGaObrEVCaf5EStNyVpMewap9
 8jtN9t3OjfhNipuVv5s=
 -----END CERTIFICATE-----
-
 </cert>
-
 <key>
 -----BEGIN PRIVATE KEY-----
 MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCwEKkkCqEK915L
