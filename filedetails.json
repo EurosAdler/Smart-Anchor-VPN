@@ -1,8 +1,6 @@
 {
 "ovpn_file":[
-  {"id":0,"file":"setenv UV_ID 23794066a1a44eba8e54fe1d93be097b
-setenv UV_NAME patient-plains-8927
-client
+  {"id":0,"file":"client
 dev tun
 dev-type tun
 remote de1.freeopenvpn.org 443 tcp-client
