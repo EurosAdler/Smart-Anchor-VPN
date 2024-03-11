@@ -1,59 +1,9 @@
 {
 "ovpn_file":[
-  {"id":0,"file":dev tun
+  {"id":0,"file":client
+dev tun
 proto udp
-emote 46.86.163.213 1194
-
-
-###############################################################################
-# The HTTP/HTTPS proxy setting.
-# 
-# Only if you have to use the Internet via a proxy, uncomment the below
-# two lines and specify the proxy address and the port number.
-# In the case of using proxy-authentication, refer the OpenVPN manual.
-
-;http-proxy-retry
-;http-proxy [proxy server] [proxy port]
-
-
-###############################################################################
-# The encryption and authentication algorithm.
-# 
-# Default setting is good. Modify it as you prefer.
-# When you specify an unsupported algorithm, the error will occur.
-# 
-# The supported algorithms are as follows:
-#  cipher: [NULL-CIPHER] NULL AES-128-CBC AES-192-CBC AES-256-CBC BF-CBC
-#          CAST-CBC CAST5-CBC DES-CBC DES-EDE-CBC DES-EDE3-CBC DESX-CBC
-#          RC2-40-CBC RC2-64-CBC RC2-CBC
-#  auth:   SHA SHA1 MD5 MD4 RMD160
-
-cipher AES-128-CBC
-auth SHA1
-
-
-###############################################################################
-# Other parameters necessary to connect to the VPN Server.
-# 
-# It is not recommended to modify it unless you have a particular need.
-
-resolv-retry infinite
-nobind
-persist-key
-persist-tun
-client
-verb 3
-#auth-user-pass
-
-
-###############################################################################
-# The certificate file of the destination VPN Server.
-# 
-# The CA certificate file is embedded in the inline format.
-# You can replace this CA contents if necessary.
-# Please note that if the server certificate is not a self-signed, you have to
-# specify the signer's root certificate (CA) here.
-
+remote 45.86.163.213 1194
 <ca>
 -----BEGIN CERTIFICATE-----
 MIIDPDCCAiSgAwIBAgIUWHR33TeuSxvL7n7nEUyoaNHp8aowDQYJKoZIhvcNAQEL
@@ -76,18 +26,6 @@ UOoOZNSG96jjmFNz146dSv3AbKjKKY2RwhGFwLXJjxzDIE6Q66SdBuWM1018ym7l
 kXt6//KAyVOuX4959qUyPw==
 -----END CERTIFICATE-----
 </ca>
-
-
-###############################################################################
-# The client certificate file (dummy).
-# 
-# In some implementations of OpenVPN Client software
-# (for example: OpenVPN Client for iOS),
-# a pair of client certificate and private key must be included on the
-# configuration file due to the limitation of the client.
-# So this sample configuration file has a dummy pair of client certificate
-# and private key as follows.
-
 <cert>
 -----BEGIN CERTIFICATE-----
 MIIDTDCCAjSgAwIBAgIQZuI6lSmiL3Zf9VF7sk7MNzANBgkqhkiG9w0BAQsFADAR
@@ -109,8 +47,7 @@ s3l9LwYI/O5CVXJ+rn3JV3DojAhRJi32dCPpfyX3p2fdxVTL8e9KNUoKLMATUTuU
 jzM3iKvtnB5MxPItWn2euNovmooUgM7cXAy06uL+8G1cMlvVIqSDOy78fBlkz8hu
 0rN7sotTvS0FSgvA/dk+JzmImp/ubj7JNJC49458Y1Y=
 -----END CERTIFICATE-----
-</cert>
-
+<cert>
 <key>
 -----BEGIN PRIVATE KEY-----
 MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCyxGPkMjWyiWcL
@@ -140,7 +77,7 @@ czm7telMddIsterHYY8cuL3eJK1ti12b+v8v6fqvFD4aRnjJrOXYAFbUrCN+M1oR
 MdGlGVexVv+wcugVbpoByyH8t58venl4zdvc1hCR2ZmyEwpUR01Hr8nuOgPu4KhF
 8S2ppJGrVq97OaMG0G4WsJ0=
 -----END PRIVATE KEY-----
-</key>"},
+<key>"},
 {"id":1,"file":"dev tun
 proto tcp
 remote 219.100.37.193 443
