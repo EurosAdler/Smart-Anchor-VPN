@@ -4,6 +4,16 @@
 dev tun
 proto udp
 remote 45.86.163.213 1194
+nobind
+persist-key
+persist-tun
+comp-lzo
+verb 3
+cipher AES-256-CBC
+fast-io
+pull
+route-delay 2
+redirect-gateway
 <ca>
 -----BEGIN CERTIFICATE-----
 MIIDPDCCAiSgAwIBAgIUWHR33TeuSxvL7n7nEUyoaNHp8aowDQYJKoZIhvcNAQEL
@@ -82,6 +92,17 @@ MdGlGVexVv+wcugVbpoByyH8t58venl4zdvc1hCR2ZmyEwpUR01Hr8nuOgPu4KhF
 dev tun
 proto udp
 remote 45.86.163.213 1194
+  resolv-retry infinite
+nobind
+persist-key
+persist-tun
+comp-lzo
+verb 3
+cipher AES-256-CBC
+fast-io
+pull
+route-delay 2
+redirect-gateway
 <ca>
 -----BEGIN CERTIFICATE-----
 MIIDPDCCAiSgAwIBAgIUWHR33TeuSxvL7n7nEUyoaNHp8aowDQYJKoZIhvcNAQEL
